@@ -18,11 +18,14 @@ public class RestControllers {
 	@Autowired
 	demoTableRepository demoTableRepo;
 	
+	//method that calculates number of digits in the given inputNumber
 	int getNumOfDigits(int inputNo) {
 		int numOfDigits=0,q=inputNo,sum=0;
 		while(q!=0) {q=q/10;numOfDigits++;}
 		return numOfDigits;
 	}
+	
+	//method that calculates sum of all digits in the given inputNumber
 	int sumOfDigits(int inputNo,int noOfDigits) {
 		int sum=0;
 		int temp=inputNo;
@@ -33,6 +36,7 @@ public class RestControllers {
 		return sum;
 	}
 	
+	//---REST Endpoint----
 	@GetMapping(path = "/FetchNextNumber")
 	public ResponseEntity<?> fetchNextNumber(@RequestBody incommingRequest inJson) throws InterruptedException {
 		
