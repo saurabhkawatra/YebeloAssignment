@@ -1,0 +1,5 @@
+- API Endpoint - /FetchNextNumber/
+- Takes JSON input in the body (categoryCode : value)
+- It is set on Port 8081
+- Configured for the local database (It could be changed in application.properties file)
+- Return JSON (oldValue : value , newValue : value )
